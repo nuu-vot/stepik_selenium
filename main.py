@@ -1,36 +1,47 @@
-import time
+import pytest
 
-# webdriver это и есть набор команд для управления браузером
-from tests.helper.base_app import BasePage
 
-# импортируем класс By, который позволяет выбрать способ поиска элемента
-from selenium.webdriver.common.by import By
+class TestMainPage():
+    # номер 1
+    @pytest.mark.xfail
+    @pytest.mark.smoke
+    def test_guest_can_login(self, browser):
+        assert True
 
-# инициализируем драйвер браузера. После этой команды вы должны увидеть новое открытое окно браузера
-driver = webdriver.Chrome()
+    # номер 2
+    @pytest.mark.regression
+    def test_guest_can_add_book_from_catalog_to_basket(self, browser):
+        assert True
 
-# команда time.sleep устанавливает паузу в 5 секунд, чтобы мы успели увидеть, что происходит в браузере
-time.sleep(5)
 
-# Метод get сообщает браузеру, что нужно открыть сайт по указанной ссылке
-driver.get("https://stepik.org/lesson/25969/step/12")
-time.sleep(5)
+class TestBasket():
+    # номер 3
+    @pytest.mark.skip(reason="not implemented yet")
+    @pytest.mark.smoke
+    def test_guest_can_go_to_payment_page(self, browser):
+        assert True
 
-# Метод find_element позволяет найти нужный элемент на сайте, указав путь к нему. Способы поиска элементов мы обсудим позже
-# Метод принимает в качестве аргументов способ поиска и значение, по которому мы будем искать
-# Ищем поле для ввода текста
-textarea = driver.find_element(By.CSS_SELECTOR, ".textarea")
+    # номер 4
+    @pytest.mark.smoke
+    def test_guest_can_see_total_price(self, browser):
+        assert True
 
-# Напишем текст ответа в найденное поле
-textarea.send_keys("get()")
-time.sleep(5)
 
-# Найдем кнопку, которая отправляет введенное решение
-submit_button = driver.find_element(By.CSS_SELECTOR, ".submit-submission")
+@pytest.mark.skip
+class TestBookPage():
+    # номер 5
+    @pytest.mark.smoke
+    def test_guest_can_add_book_to_basket(self, browser):
+        assert True
 
-# Скажем драйверу, что нужно нажать на кнопку. После этой команды мы должны увидеть сообщение о правильном ответе
-submit_button.click()
-time.sleep(5)
+    # номер 6
+    @pytest.mark.regression
+    def test_guest_can_see_book_price(self, browser):
+        assert True
 
-# После выполнения всех действий мы должны не забыть закрыть окно браузера
-driver.quit()
+
+# номер 7
+@pytest.mark.beta_users
+@pytest.mark.smoke
+def test_guest_can_open_gadget_catalogue(browser):
+    assert True
