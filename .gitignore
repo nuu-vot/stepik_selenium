@@ -1,3 +1,6 @@
 venv
 .pytest_cache
+.idea
+__pycache__
 file_example.txt
+main.py
