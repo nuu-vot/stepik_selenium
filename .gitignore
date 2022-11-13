@@ -2,6 +2,7 @@ venv
 .pytest_cache
 .idea
 __pycache__
-file_example.txt
-main.py
-modul_3-6-5.py
+part 1/file_example.txt
+part 1/main.py
+part 3/modul_3_6_5.py
+part 3/config.py
