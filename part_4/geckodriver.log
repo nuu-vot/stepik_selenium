@@ -1,0 +1,14 @@
+1668361537941	geckodriver	INFO	Listening on 127.0.0.1:51982
+1668361580891	geckodriver	INFO	Listening on 127.0.0.1:52001
+1668361656402	geckodriver	INFO	Listening on 127.0.0.1:52087
+1668361659492	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52088" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Pavel\\AppData\\Local\\Temp\\rust_mozprofilemYJP6Y"
+1668361659753	Marionette	INFO	Marionette enabled
+1668361659757	Marionette	INFO	Listening on port 52097
+WebDriver BiDi listening on ws://127.0.0.1:52088
+Read port: 52097
+1668361659938	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Pavel\\AppData\\Local\\Temp\\rust_mozprofilemYJP6Y\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:52088/devtools/browser/e1b207f8-be2a-4fb3-9a9c-c9b174704f83
+JavaScript warning: https://stepik.azureedge.net/static/frontend-build/vendor.js?v=1667806980, line 6289: unreachable code after return statement
+1668361665444	Marionette	INFO	Stopped listening on port 52097
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 693: TypeError: this.tablesData[table] is undefined
