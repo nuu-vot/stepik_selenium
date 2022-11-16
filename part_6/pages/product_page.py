@@ -6,7 +6,7 @@ from .locators import ProductPageLocators
 class PageObject(BasePage):
     """Класс для работы со страницей товара"""
 
-    def add_to_basket(self):
+    def add_product_to_basket(self):
         """Проверка добавления товара в корзину"""
         self.browser.find_element(*ProductPageLocators.ADD_TO_BASKET).click()
         self.solve_quiz_and_get_code()
