@@ -1,4 +1,4 @@
-"""Курс по селениуму, модуль 4"""
+"""Курс по селениуму, модуль 4.2"""
 from .pages.main_page import MainPage
 from .pages.login_page import LoginPage
 
