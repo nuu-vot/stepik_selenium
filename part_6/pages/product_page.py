@@ -3,7 +3,7 @@ from .base_page import BasePage
 from .locators import ProductPageLocators
 
 
-class PageObject(BasePage):
+class ProductPage(BasePage):
     """Класс для работы со страницей товара"""
 
     def add_product_to_basket(self):
@@ -26,3 +26,13 @@ class PageObject(BasePage):
         alert_price = self.browser.find_element(*ProductPageLocators.ALERT_PRICE).text
         assert price == alert_price, \
             f'Неожиданная стоимость товара в корзине "{alert_price}", вместо "{price}"'
+
+    def should_not_be_success_message(self):
+        """Проверка отсутствия отображения сообщения об успешном добавлении товара в корзину"""
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
+            "Сообщение об успехе отображается, но не должно"
+
+    def success_message_should_disappear(self):
+        """Проверка исчезновения отображения сообщения об успешном добавлении товара в корзину"""
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \
+            "Сообщение об успехе не исчезает, но должно"
