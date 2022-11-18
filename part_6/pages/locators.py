@@ -7,12 +7,17 @@ class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
     LINK_TO_BASKET = (By.CSS_SELECTOR, ".basket-mini a.btn.btn-default")
+    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
 
 
 class LoginPageLocators():
     """Селекторы для страницы авторизации"""
     LOGIN_FORM = (By.CSS_SELECTOR, "#login_form")
     REGISTER_FORM = (By.CSS_SELECTOR, "#register_form")
+    REGISTRATION_EMAIL = (By.ID, "id_registration-email")
+    REGISTRATION_PASSWORD_1 = (By.ID, "id_registration-password1")
+    REGISTRATION_PASSWORD_2 = (By.ID, "id_registration-password2")
+    REGISTRATION_SUBMIT = (By.CSS_SELECTOR, '[name="registration_submit"]')
 
 
 class ProductPageLocators():
@@ -24,8 +29,9 @@ class ProductPageLocators():
     ALERT_PRICE = (By.CSS_SELECTOR, ".alert-info .alertinner strong")
     SUCCESS_MESSAGE = (By.CSS_SELECTOR, "#messages div:nth-child(1)")
 
+
 class BacketPageLocators():
     """Селекторы для корзины"""
     BASKET_FORMSET = (By.ID, "basket_formset")
-    BASKET_EMPTY = (By.CSS_SELECTOR, "#content_inner a")  #Селектор ссылки "Продолжить покупки"
+    BASKET_EMPTY = (By.CSS_SELECTOR, "#content_inner a")  # Селектор ссылки "Продолжить покупки"
     # (появляется, если корзина пуста)
